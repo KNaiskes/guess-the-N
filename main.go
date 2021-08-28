@@ -37,5 +37,27 @@ func correctGuess(userGuess int, randomGuess int) bool {
 		return false
 	}
 }
+
 func main() {
+	const TRIES = 2
+
+	fmt.Println("Random number")
+	randomGuess := generateRandomInt(10)
+	fmt.Println(randomGuess)
+
+	fmt.Println("Make a guess")
+	userGuess := getUserInt()
+
+	// fmt.Println(userGuess)
+
+	for i := 0; i < TRIES; i++ {
+		if correctGuess(userGuess, randomGuess) {
+			fmt.Println("WOW! You guessed correctly")
+			break
+		} else {
+			fmt.Println("Your guess is wrong :(")
+			fmt.Println("Try again")
+			userGuess = getUserInt()
+		}
+	}
 }
