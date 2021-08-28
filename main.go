@@ -30,5 +30,12 @@ func getUserInt() int {
 	return convertToInt
 }
 
+func correctGuess(userGuess int, randomGuess int) bool {
+	if userGuess == randomGuess {
+		return true
+	} else {
+		return false
+	}
+}
 func main() {
 }
