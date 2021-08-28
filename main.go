@@ -39,18 +39,15 @@ func correctGuess(userGuess int, randomGuess int) bool {
 }
 
 func main() {
-	const TRIES = 2
+	const MAX = 10
 
-	fmt.Println("Random number")
-	randomGuess := generateRandomInt(10)
-	fmt.Println(randomGuess)
+	randomGuess := generateRandomInt(MAX)
+	// fmt.Printf("Random number %d\n", randomGuess)
 
-	fmt.Println("Make a guess")
+	fmt.Printf("Make a guess, the bigger number is guaranteed to be: %d\n", MAX)
 	userGuess := getUserInt()
 
-	// fmt.Println(userGuess)
-
-	for i := 0; i < TRIES; i++ {
+	for {
 		if correctGuess(userGuess, randomGuess) {
 			fmt.Println("WOW! You guessed correctly")
 			break
