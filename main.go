@@ -7,10 +7,10 @@ import (
 	"time"
 )
 
-func generateRandomInt() int {
+func generateRandomInt(rangeInt int) int {
 	rand.Seed(time.Now().UnixNano())
 
-	return rand.Intn(100)
+	return rand.Intn(rangeInt)
 }
 
 func getUserInt() int {
