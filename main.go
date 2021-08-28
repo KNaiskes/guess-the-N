@@ -53,6 +53,11 @@ func main() {
 			break
 		} else {
 			fmt.Println("Your guess is wrong :(")
+			if userGuess > randomGuess {
+				fmt.Println("Your guess it too high")
+			} else {
+				fmt.Println("Your guess it too low")
+			}
 			fmt.Println("Try again")
 			userGuess = getUserInt()
 		}
